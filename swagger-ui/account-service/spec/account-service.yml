@@ -47,7 +47,7 @@ paths:
     get:
       tags:
         - "Счета"
-      summary: "Получить страницу счетов"
+      summary: "Получить страницу счетов текущего пользователя"
       security:
         - bearerAuth: []
       parameters:
