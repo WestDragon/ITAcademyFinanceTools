@@ -29,6 +29,8 @@ paths:
       tags:
         - "Счета"
       summary: "Добавление нового счёта"
+      security:
+        - bearerAuth: []
       requestBody:
         $ref: "#/components/requestBodies/CreateAccount"
       responses:
@@ -46,6 +48,8 @@ paths:
       tags:
         - "Счета"
       summary: "Получить страницу счетов"
+      security:
+        - bearerAuth: []
       parameters:
         - in: query
           name: page
@@ -79,6 +83,8 @@ paths:
       tags:
         - "Счета"
       summary: "Получить информацию по счёту"
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: uuid
@@ -107,6 +113,8 @@ paths:
       tags:
         - "Счета"
       summary: Редактировать информацию о счёте
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: uuid
@@ -140,6 +148,8 @@ paths:
       tags:
         - "Операции"
       summary: Добавление операции по счёту
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: uuid
@@ -165,6 +175,8 @@ paths:
       tags:
         - "Операции"
       summary: Получить страницу операций по счёту
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: uuid
@@ -205,6 +217,8 @@ paths:
       tags:
         - "Операции"
       summary: Редактировать информацию об операции на счёте
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: uuid
@@ -244,6 +258,8 @@ paths:
       tags:
         - "Операции"
       summary: Удалить операцию на счёте
+      security:
+        - bearerAuth: []
       parameters:
         - in: path
           name: uuid
