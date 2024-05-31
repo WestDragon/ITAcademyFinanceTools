@@ -26,6 +26,18 @@ services:
       - 82:80
     networks:
       - finance-network
+  user-service:
+    build: user-service
+    image: user-service-finance:1.0.0
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - finance-network
+  audit-service:
+    build: audit-service
+    image: audit-service-finance:1.0.0
+    networks:
+      - finance-network
 
 networks:
   finance-network:
